@@ -1,7 +1,3 @@
-body {
-  font-family: 'nanum-gothic', sans-serif;
-}
-
 nav{
   width:100%;
   height: 70px;
@@ -74,20 +70,39 @@ nav a{
   color: gray;
 }
 
+.container{
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
+  display: block !important;
+  width: 100% !important;
+
+}
+
+#delivery{
+  background: #F9FAFB !important;
+}
 
 #delivery .row,
 #new .row
 {
   display:inline-block !important;
-  font-size: 17px;
-  margin: 10px 0;
 }
+
+#delivery .row .col-sm-6:nth-child(odd),
+#new .row .col-sm-6:nth-child(odd){
+  top: 50px;
+}
+
+#delivery .col-sm-6,
+#new .col-sm-6
+{
+  padding: 20px;
+}
+
 #delivery .col-sm-6 img,
 #new .col-sm-6 video
 {
   width: 100%;
-  font-size: 17px;
-  margin: 10px 0;
 }
 #delivery .row:not(:nth-of-type(2)) .col-sm-6,
 #new .row:not(:nth-of-type(2)) .col-sm-6
@@ -100,17 +115,31 @@ nav a{
   float: left !important;  
 }
 
-#slider{
-  padding: 40px; 
-  text-align: center; 
-
+#delivery h1,
+#new h1,
+#slider h1
+{
+  font-size: 45px;
+  font-weight: bold;
 }
-
-#slider h1 {
-  font-size: 36px; /* 글자 크기 */
-  color: #333; /* 글자 색 */
-  font-weight: bold; /* 글자 굵기 */
-  margin-bottom: 20px; /* 하단 여백 */
+#delivery h1 span,
+#new h1 span,
+#slider h1 span
+{
+  color:#00B0FB;
+}
+#delivery .col-sm-6 h3,
+#new .col-sm-6 h3
+{
+  font-size: 25px;
+  font-weight: bold;
+  color:#00B0FB;
+}
+#delivery .col-sm-6 h2,
+#new .col-sm-6 h2
+{
+  font-size: 35px;
+  font-weight: bold;
 }
 
 #better{
@@ -121,17 +150,27 @@ nav a{
   clear: both;
 }
 
-footer {
-  background-color: #f2f2f2;
-  position: relative;
-  padding: 20px;
+#better a{
+  color:black;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.footer_logo {
-  position: absolute; /* 화면에 고정 */
-  top: 10px;    /* 상단에 배치 */
-  right: 50px;       /* 화면의 우측에 배치 */
-   width: 200px;    /* 로고의 크기 설정 */
+footer{
+  background: #f2f2f2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 17px;
+}
+
+footer .container{
+  position: relative;
+}
+
+#splash{
+  position: absolute;
+  top: 70px;
+  right:20px;
 }
 
 @media screen and (max-width:575px) {
@@ -168,11 +207,30 @@ footer {
     box-sizing: border-box;
     padding-top: 50px;
   }
-  .footer_logo{
-    position: relative; /* 화면에 고정 */
-      bottom: 10px;    /* 하단에 배치 */
-      left: 120px;       
-      width: 200px;   
-      
-    }
+
+  #delivery .row .col-sm-6:nth-child(odd),
+  #new .row .col-sm-6:nth-child(odd){
+    top: 0px;
+    left:20px;
+  }
+
+  #better{
+    background-image: url("/img/mobile_title02.jpg");
+  }
+
+  #slider h1{
+    font-size: 25px;
+  }
+
+  footer div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;    
+  }
+
+  #splash{
+    position: relative;
+    left:0px;
+  }
 }
